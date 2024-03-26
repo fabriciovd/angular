@@ -21,3 +21,8 @@
 .nav-bar{
     font-family: cursive;
 }
+
+.cart-ico{
+    width: 25px;
+    transform: scaleX(-1);
+    margin-right: 10px;}
