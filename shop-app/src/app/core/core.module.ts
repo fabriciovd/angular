@@ -4,8 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
+import { WelcomeMsgComponent } from '../shared/welcome-msg/welcome-msg.component';
 
-
+const routes = [
+  { path: '', component: WelcomeMsgComponent }
+];
 
 @NgModule({
   declarations: [
@@ -15,11 +19,14 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent
   ]
 })
-export class CoreModule { }
+export class CoreModule { 
+  constructor(private router: RouterModule){}
+}

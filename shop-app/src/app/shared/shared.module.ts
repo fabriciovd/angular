@@ -10,6 +10,9 @@ import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    WelcomeMsgComponent
   ]
 })
 export class SharedModule { }
