@@ -1,6 +1,7 @@
 .logo img{
-    width: 64px;
+    width: 80px;
     border-radius: 50%;
+    border: 2px solid crimson;
 }
 .header-wrapper{
     display: flex;
@@ -8,5 +9,15 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #f8f8f8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
+    font-size: 20px;
+    
+}
+.header-wrapper p {
+    color: crimson;
+    font-family: cursive;
+    font-size: 20px;
+}
+.nav-bar{
+    font-family: cursive;
 }
