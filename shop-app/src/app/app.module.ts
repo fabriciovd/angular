@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UserModule } from './user/user.module';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    UserModule,
+    OrderModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
