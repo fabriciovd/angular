@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
 import { OrderModule } from './order/order.module';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { OrderModule } from './order/order.module';
     OrderModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

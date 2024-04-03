@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserForAuth } from '../types/user';
+import { AuthService } from '../auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -7,10 +8,7 @@ import { UserForAuth } from '../types/user';
 export class UserService {
   user: UserForAuth | undefined;
   USER_KEY = '[user]';
-
-  get isLogged(): boolean {
-    return !!this.user;
-  }
+  static isLogged: boolean = AuthService.isAthenticated();
 
   constructor() {
     try {
@@ -20,7 +18,9 @@ export class UserService {
       this.user = undefined;
     }
   }
-
+  static isLogedIn(): boolean{
+    return AuthService.isAthenticated();
+  }
   login() {
     this.user = {
       id: '5fa64ca72183ce1728ff3726',

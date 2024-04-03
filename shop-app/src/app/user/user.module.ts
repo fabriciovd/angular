@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
+import { UserService } from './user.service';
 
 
 
@@ -22,6 +23,7 @@ import { UserRoutingModule } from './user-routing.module';
     RouterModule,
     SharedModule,
     FormsModule,
-  ]
+  ],
+  providers: [UserService]
 })
 export class UserModule { }

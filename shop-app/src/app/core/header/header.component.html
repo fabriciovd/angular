@@ -1,39 +1,46 @@
 <div class="header-wrapper">
-
-    <div class="logo" routerLink="/home">
-    <img src="https://scontent.fsof1-1.fna.fbcdn.net/v/t39.30808-6/276275419_100866705914671_5853297082494224852_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nLCErcu1TbMAX-t-3E-&_nc_ht=scontent.fsof1-1.fna&oh=00_AfAmMESA2ov18mIiPLu-iN41I2BW_SGY8yVnS7q_5rjKUw&oe=6607A284">
+  <div class="logo" routerLink="/home">
+    <img
+      src="https://scontent.fsof1-1.fna.fbcdn.net/v/t39.30808-6/276275419_100866705914671_5853297082494224852_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nLCErcu1TbMAX-t-3E-&_nc_ht=scontent.fsof1-1.fna&oh=00_AfAmMESA2ov18mIiPLu-iN41I2BW_SGY8yVnS7q_5rjKUw&oe=6607A284"
+    />
     <p>Ателие ВИЗИЯ</p>
-    </div>
-    <div class="nav-bar">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-expanded="false"
-                >Shop</a
-                >
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" routerLink="/products">Products</a></li>
-                    <li><a class="dropdown-item" routerLink="/orders">Orders</a></li>
-                    <!-- <li><hr class="dropdown-divider" /></li> -->
-                </ul>
-            </li>
-            <li><a class="nav-link" routerLink="/cart"><img class="cart-ico" src="https://static-00.iconduck.com/assets.00/shopping-cart-icon-512x462-yrde1eu0.png"></a></li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/login">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/register">Register</a>
-            </li> <li class="nav-item">
-                <a class="nav-link" routerLink="/logout">Logout</a>
-            </li>
+  </div>
+  <div class="nav-bar">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          data-bs-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-expanded="false"
+          >Shop</a
+        >
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/products">Products</a></li>
+          <li><a class="dropdown-item" routerLink="/orders">Orders</a></li>
+          <!-- <li><hr class="dropdown-divider" /></li> -->
         </ul>
-    </div>
-    
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/cart"
+          ><img
+            class="cart-ico"
+            src="https://static-00.iconduck.com/assets.00/shopping-cart-icon-512x462-yrde1eu0.png"
+        /></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedin" (click)="logout()">
+        <a class="nav-link" routerLink="/logout">Logout</a> 
+      </li>
+    </ul>
+  </div>
 </div>
